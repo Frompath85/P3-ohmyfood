@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- normalise + icons fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./scss/styles.css">
 
     <title>Ohmyfood</title>
 </head>
@@ -16,28 +23,46 @@
     </header>
 
     <main>
-        <form action="#">
+        <form class="search-bar" action="#">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" name="ville" placeholder="Paris, Belleville">
         </form>
 
-        <section>
+        <section class="explore-bar">
             <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button type="button">Explorer nos restaurants</button>
         </section>
 
-        <section>
+        <section class="function-bar">
             <h2>Fonctionnement</h2>
-            <ol>
-                <li><i class="fa-solid fa-mobile-screen"></i> choississez un restaurant</li>
-                <li><i class="fa-solid fa-list"></i>Composez votre menu</li>
-                <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
-            </ol>
+            <div class="menu-bar">
+                <a href="#">
+                    <article>
+                        <span>1</span>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Choississez un restaurant
+                    </article>
+                </a> 
+                <a href="#">
+                    <article>
+                        <span>2</span>
+                        <i class="fa-solid fa-list"></i>
+                        Composez votre menu
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <span>3</span>
+                        <i class="fa-solid fa-store"></i>
+                        Dégustez au restaurant 
+                    </article>
+                </a>    
+            </div>
             
         </section>
 
-        <section>
+        <!-- <section>
             <h2>Restaurants</h2>
             <article>
                 <a href="restaurant1.html">
@@ -101,7 +126,7 @@
                     </div>
                 </a>
             </article>
-        </section>
+        </section> -->
 
     </main>
 
