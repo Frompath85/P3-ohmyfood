@@ -15,3 +15,27 @@
     font-size: 14px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;               
 }
+
+%footer {
+    background-color: rgb(62, 60, 60) ;
+    padding: 8px 25px;
+    p{
+        font-family: Shrikhand;
+        color: white;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        li{ 
+            margin-bottom: 8px;
+           a{
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            i{
+                margin-right: 7px;
+            }
+           }
+        }
+    }
+}
