@@ -5,98 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- police -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+     
+     <!-- normalise + icons fontawsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+     <link rel="stylesheet" href="./scss/main.css">
 
     <title>Le délice des sens</title>
 </head>
 
 <body>
-    <header>
+    <header class="header-restaurant">
         <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1>ohmyfood</h1>
+        <img src="images/logo/ohmyfood.png" alt="Logo OhMyFood">
     </header>
-    <main>
-        <img src="" alt="">
-        <div>
+
+    <main class="container">
+        
+        <img class="img-restaurant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du gout">
+        <div class="titre-restaurant">
             <h2>Le délice des sens</h2>
             <i class="fa-regular fa-heart"></i>
         </div>
-        <section>
-            <div>
-                <h3></h3>
-                <div>
-                    <article>
-                        <div>
-                            <h4></h4>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p></p>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <h4></h4>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p></p>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <h4></h4>
-                            <p></p>
-                        </div>
-                        <div>
-                            <p></p>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div>
-                <h3></h3>
-                <div>
-                    <article>
 
+        <section class="menu">
+            <div class="sous-menu">
+                <h3><span>ENTR</span>EES</h3>
+                <div class="list-menu">
+                    <article class="article-menu">
+                        <h4>Tartare de thon</h4>
+                        <div class="description"> 
+                            <p>Assaisonné au yuzu </p> 
+                            <p>25€</p>
+                        </div>
                     </article>
-                    <article></article>
-                    <article></article>
+                    <article class="article-menu">
+                        <h4>Bouchée de homard croustillant </h4>
+                        <div class="description"> 
+                            <p>Et sa farandole de petits légumes </p> 
+                            <p>35€</p>
+                        </div>
+                    </article>
+                    <article class="article-menu">
+                        <h4>Velouté de cèpes</h4>
+                        <div class="description"> 
+                            <p>Aux truffes</p> 
+                            <p>20€</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div>
-                <h3></h3>
-                <div>
-                    <article>
 
+            <div class="sous-menu">
+                <h3><span>PLAT</span>S</h3>
+                <div class="list-menu">
+                    <article class="article-menu">
+                        <h4>Poulet rôti aux herbes de Provence</h4>
+                        <div class="description"> 
+                            <p>Et sa crème de truffe</p> 
+                            <p>40€</p>
+                        </div>
                     </article>
-                    <article></article>
-                    <article></article>
+                    <article class="article-menu">
+                        <h4>Langouste rôtie</h4>
+                        <div class="description"> 
+                            <p>Et ses légumes de saison</p> 
+                            <p>35€</p>
+                        </div>
+                    </article>
+                    <article class="article-menu">
+                        <h4>Côte de boeuf Angus</h4>
+                        <div class="description"> 
+                            <p>Et sa purée de panais </p> 
+                            <p>44€</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <button type="button">commander</button>
+           
+            <div class="sous-menu">
+                <h3><span>DESS</span>ERT</h3>
+                <div class="list-menu">
+                    <article class="article-menu">
+                        <h4>Farandole de desserts</h4>
+                        <div class="description"> 
+                            <p>Du chef</p> 
+                            <p>18€</p>
+                        </div>
+                    </article>
+                    <article class="article-menu">
+                        <h4>Crème brulée </h4>
+                        <div class="description"> 
+                            <p>Revisitée</p> 
+                            <p>22€</p>
+                        </div>
+                    </article>
+                    <article class="article-menu">
+                        <h4>Tiramisu</h4>
+                        <div class="description"> 
+                            <p>À la noisette</p> 
+                            <p>23€</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+           
+            <button type="button">Commander</button>
         </section>
     </main>
     
     <footer>
-        <p>ohmyfood</p> 
+        <p>Ohmyfood</p>
         <ul>
             <li>
-                <i class="fa-solid fa-utensils"></i>
-                Proposer un restaurant
+                <a href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    Proposer un restaurant
+                </a> 
             </li>
             <li>
-                <i class="fa-solid fa-handshake-angle"></i>
-                Devenir partenaire
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    Devenir partenaire
+                </a>   
             </li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li>
+                <a href="#"> 
+                    Mentions légales
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Contact
+                </a>
+            </li>
         </ul>   
     </footer>
-
+   
+    
 </body>
 </html>
