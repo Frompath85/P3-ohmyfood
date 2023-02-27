@@ -1,0 +1,23 @@
+%article-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 1px 5px 8px 0px #e4e3e3;
+    padding: 10px 10px 5px 10px;
+    border-radius: 15px;
+    h4
+    {
+        margin: 0px 0px 7px 0px;
+        font-size: 18PX;
+    }
+    .description{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            margin: 0px 0px 7px 0px;
+        }
+    }
+
+}
