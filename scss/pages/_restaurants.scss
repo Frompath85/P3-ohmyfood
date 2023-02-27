@@ -1,0 +1,60 @@
+
+.img-restaurant{
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
+}
+.titre-restaurant{
+    @include display-flex(row, center, 0px 20px);
+    justify-content: space-between;
+    position: relative;
+    top: -70px;
+    background-color: $gris-menu;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    h2{
+        font-family: 'Shrikhand';
+        font-weight: 100;
+    }
+    i{
+        font-size: 25px;
+        margin-right: 10px;
+    }
+}
+.menu{
+    @include display-flex(column, stretch, 0px 10px);
+    gap : 20px; 
+    background-color:$gris-menu;
+    position: relative;
+    top: -70px;
+
+    .sous-menu{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-weight: 100;
+            margin: 10px 0px 18px 0px;
+            span{
+                padding-bottom: 3px;
+                border-bottom: 3px solid $tertiaire;
+            }
+        }
+        .list-menu{ 
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .article-menu{
+                @extend %article-menu;
+            }
+            }
+    }
+}
+
+button{
+   @include purple-button(180px, 20px 20% 30px 20%);
+}
+
+// footer{ une fonction avec condition
+//     position: relative;
+//     top: -70px;
+// }
