@@ -1,0 +1,16 @@
+@mixin purple-button($width, $margin){
+    width: $width;
+    margin: $margin;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background:linear-gradient($secondaire,$primaire );
+    border:none;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;    
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        box-shadow: rgba(0, 0, 0, 0.24) 2px 5px 7px; 
+    }           
+}
