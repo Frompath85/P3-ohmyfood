@@ -1,0 +1,6 @@
+@mixin pseudo-text($size, $top, $left, $pos:center, $color:rgb(149, 15, 15)){
+    font-size: $size;
+    margin: $top $left;
+    text-align: $pos;
+    color: $color;
+}

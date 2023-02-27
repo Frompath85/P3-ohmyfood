@@ -1,0 +1,9 @@
+.header-accueil{
+    @extend %align-page;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 40%;
+        margin: 20px 0px 12px 0px;
+    }
+}

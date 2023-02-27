@@ -1,0 +1,17 @@
+%align-page {
+    max-width: $taille-ecran;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+%purple-button{
+    width: 200px;
+    margin: 20px 0px 25px 0px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background:linear-gradient($secondaire,$primaire );
+    border:none;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;               
+}
