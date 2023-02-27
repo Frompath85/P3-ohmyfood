@@ -1,6 +1,12 @@
-@mixin pseudo-text($size, $top, $left, $pos:center, $color:rgb(149, 15, 15)){
+@mixin pseudo-text($size, $top, $left, $pos:center, $color:rgb(0, 0, 0)){
     font-size: $size;
     margin: $top $left;
     text-align: $pos;
     color: $color;
+}
+@mixin display-flex($direction, $align, $padding){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    padding: $padding;
 }
