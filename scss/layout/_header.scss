@@ -7,3 +7,19 @@
         margin: 20px 0px 12px 0px;
     }
 }
+.header-restaurant{
+    @extend %align-page;
+    
+    display: flex;
+    gap: 25%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 19px;
+    img{
+        width: 50%;
+    }
+    a{
+        color: black;
+    }
+}
