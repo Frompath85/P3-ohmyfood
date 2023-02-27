@@ -15,37 +15,27 @@
     }
 }
 .explore-bar{
-    padding:20px;
-    display: flex;
-    flex-direction: column;
-    background-color: $gris-menu;
-    align-items: center;
-   
+    @include display-flex(column, center, 20px);
+    background-color: $gris-menu; 
     p{ 
        @include pseudo-text(16px, 5px, 0px, center, #605e5e);
     }
     button{
-        @extend %purple-button;
+        @include purple-button(200px, 20px 0px 25px 0px);
     }
 
 }
 .function-bar
 {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+    @include display-flex(column, stretch, 10px);
     h2{
         @include pseudo-text(18px, 10px, 0px, left, black);
     }
     .menu-bar{
-        display: flex;
-        flex-direction: column;
-        align-items: end;
+        @include display-flex(column, end, 0px);
         gap: 20px;
         margin-top: 15px;
-        a{ 
-            text-decoration: none;
-            color: black;
+        .menu-item{ 
             background-color: $gris-menu;
             border-radius: 15px;
             box-shadow: 0px 3px 5px $gris-ville; 
@@ -53,9 +43,9 @@
             font-weight: bold;
             padding: 18px 0px;
             width: 95%;
-
-            article
-            {
+            a{
+                text-decoration: none;
+                color: black;
                 span{
                     background-color: $primaire;
                     border: 1px solid $primaire;
@@ -116,11 +106,8 @@
                     border-top-right-radius: 10px;
                 }
                 .description{
-                    display: flex;
-                    flex-direction: row;
+                    @include display-flex(row, center, 10px);
                     justify-content: space-between;
-                    align-items: center;
-                    padding: 10px;
                     .titre{
                             font-size: 14PX;
                             h3{
