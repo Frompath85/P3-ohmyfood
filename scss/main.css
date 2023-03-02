@@ -15,7 +15,7 @@
 }
 .menu .sous-menu .list-menu .article-menu h4 {
   margin: 0px 0px 7px 0px;
-  font-size: 18PX;
+  font-size: 16px;
 }
 .menu .sous-menu .list-menu .article-menu .description {
   display: flex;
@@ -23,7 +23,11 @@
   justify-content: space-between;
 }
 .menu .sous-menu .list-menu .article-menu .description p {
+  font-size: 14px;
   margin: 0px 0px 7px 0px;
+}
+.menu .sous-menu .list-menu .article-menu:hover {
+  background-color: aqua;
 }
 
 h1 {
@@ -174,6 +178,12 @@ footer ul li a i {
   color: grey;
   margin-right: 15px;
 }
+.function-bar .menu-bar .menu-item:hover {
+  background-color: #f5edff;
+}
+.function-bar .menu-bar .menu-item:hover i {
+  color: #9356DC;
+}
 
 .restaurant-bar {
   margin-top: 40px;
@@ -294,6 +304,7 @@ footer ul li a i {
 }
 .menu .sous-menu h3 {
   font-weight: 100;
+  font-size: 18px;
   margin: 10px 0px 18px 0px;
 }
 .menu .sous-menu h3 span {
