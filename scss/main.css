@@ -26,9 +26,6 @@
   font-size: 14px;
   margin: 0px 0px 7px 0px;
 }
-.menu .sous-menu .list-menu .article-menu:hover {
-  background-color: aqua;
-}
 
 h1 {
   font-size: 18px;
@@ -316,6 +313,33 @@ footer ul li a i {
   flex-direction: column;
   gap: 10px;
 }
+.menu .sous-menu .list-menu .article-menu {
+  position: relative;
+}
+.menu .sous-menu .list-menu .article-menu:hover::after {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 1000ms ease;
+}
+.menu .sous-menu .list-menu .article-menu::after {
+  content: "check";
+  background-color: #99E2D0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 23px 20px;
+  transform: scaleX(0);
+}
+.menu .sous-menu .list-menu .article-menu .description:hover {
+  background-color: aqua;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 button {
   width: 180px;
   margin: 20px 20% 30px 20%;

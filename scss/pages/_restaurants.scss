@@ -46,8 +46,37 @@
             gap: 10px;
             .article-menu{
                 @extend %article-menu;
+                position: relative;   
+
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: right; // elle s'ouvre de droite a gauche
+                    transition: transform 1000ms ease;
+
+                 }
+
+                &::after{
+                    content: "check";
+                    background-color: $tertiaire;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    padding :23px 20px;
+                   // z-index: -1;
+                    transform: scaleX(0); 
+                }
+                .description:hover{
+                    background-color: aqua;
+                    width: 70%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
-            }
+           
+        }
     }
 }
 
