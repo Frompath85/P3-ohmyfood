@@ -61,6 +61,12 @@
                     margin-right: 15px;
                 }
             }
+            &:hover{
+                background-color: #f5edff;
+                i{
+                    color: $primaire;
+                }
+            }
         }
     }
 }
