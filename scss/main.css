@@ -4,29 +4,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.menu .sous-menu .list-menu .article-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  box-shadow: 1px 5px 8px 0px #e4e3e3;
-  padding: 10px 10px 5px 10px;
-  border-radius: 15px;
-}
-.menu .sous-menu .list-menu .article-menu h4 {
-  margin: 0px 0px 7px 0px;
-  font-size: 16px;
-}
-.menu .sous-menu .list-menu .article-menu .description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.menu .sous-menu .list-menu .article-menu .description p {
-  font-size: 14px;
-  margin: 0px 0px 7px 0px;
-}
-
 h1 {
   font-size: 18px;
   margin: 5px 0px;
@@ -314,30 +291,64 @@ footer ul li a i {
   gap: 10px;
 }
 .menu .sous-menu .list-menu .article-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 1px 5px 8px 0px #e4e3e3;
+  border-radius: 15px;
   position: relative;
 }
-.menu .sous-menu .list-menu .article-menu:hover::after {
-  transform: scaleX(1);
+.menu .sous-menu .list-menu .article-menu .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+}
+.menu .sous-menu .list-menu .article-menu .description h4, .menu .sous-menu .list-menu .article-menu .description p {
+  font-size: 14px;
+  margin: 0px 0px 7px 0px;
+  width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu .sous-menu .list-menu .article-menu .prix {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.menu .sous-menu .list-menu .article-menu .prix p {
+  margin: 11px 5px;
+  align-items: end;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+.menu .sous-menu .list-menu .article-menu .prix i {
+  background-color: #99E2D0;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 21px 18px;
+  font-size: 20px;
+  position: absolute;
+  right: 0px;
+  transform: scaleX(0);
+}
+.menu .sous-menu .list-menu .article-menu:hover .prix i {
+  transform: scale(1);
   transform-origin: right;
   transition: transform 1000ms ease;
 }
-.menu .sous-menu .list-menu .article-menu::after {
-  content: "check";
-  background-color: #99E2D0;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding: 23px 20px;
-  transform: scaleX(0);
+.menu .sous-menu .list-menu .article-menu:hover .prix p {
+  transform: translateX(-50px);
+  transform-origin: right;
+  transition: transform 1000ms ease;
 }
-.menu .sous-menu .list-menu .article-menu .description:hover {
-  background-color: aqua;
-  width: 70%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu .sous-menu .list-menu .article-menu:hover .description H4, .menu .sous-menu .list-menu .article-menu:hover .description P {
+  width: 180px;
 }
 
 button {
