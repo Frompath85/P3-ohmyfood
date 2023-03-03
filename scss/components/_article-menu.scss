@@ -1,3 +1,8 @@
+@keyframes tourner {                       
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 @mixin article-menu{
     display: flex;
     justify-content: space-between;
@@ -26,16 +31,14 @@
     .prix{
         font-size: 14px;
         display: flex;
-        align-items: flex-end;
-        position: relative;
-        p{ 
-           margin : 11px 5px;
-           align-items: end; 
-           font-weight: bold;
-           position: absolute;
-           right: 10px;
-        } 
-        i{
+        margin : 11px 10px;
+        align-items: end; 
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        
+    }
+    .select-menu{ 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,21 +48,19 @@
             width: 50px;
             height: 60px;
             font-size: 20px;
+            
             margin-right: -50px;
-        }
     }
 
     &:hover{
         cursor: pointer;
-        .prix
-        {
-            i,P{
-                transform: translateX(-50px);
-                transform-origin: right;
-                transition: transform 1000ms ease;
-            }
-           
+        .prix,.select-menu
+        { 
+            transform: translateX(-50px);
+            transform-origin: right;
+            transition: transform 1000ms ease;  
         }
+       
         .description{
            // transform: scaleX(0.8);
             width: 150px;
@@ -67,25 +68,18 @@
             transition: transform 1000ms ease;
         }
     }
+
+    &:hover .select-menu i {
+        animation: tourner 1s;
+    }
+
     &:not(:hover){
-        .prix
-        {
-            i{
-                
-                transform: translateX(0px);
-                transform-origin: left;
-                transition: transform 1000ms ease;
-            }
-            P{
-                transform: translateX(0px);
-                transform-origin: left;
-                transition: transform 1000ms ease;
-            }
+        .prix, .select-menu
+        {   
+            transform: translateX(0px);
+            transform-origin: left;
+            transition: transform 1000ms ease;
         }
     }
 }
 
-@keyframes tourner {                       
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
