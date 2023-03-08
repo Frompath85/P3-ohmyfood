@@ -1,0 +1,39 @@
+@mixin anim_coeur{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-right: 12px;
+
+    .fa-solid{
+       display: none;
+    }   
+         
+    &:hover{ 
+        cursor: pointer;
+        .fa-regular {
+            display: none;
+        }
+       .fa-solid{
+            display: inline;
+            opacity: 0;
+            color: transparent;
+            background-image: linear-gradient($secondaire,$primaire ); 
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: apparition_coeur 1s ;
+            opacity: 1; // sinon si on laisse la souris sur le coeur disparait
+    } 
+    }             
+}
+
+@keyframes apparition_coeur {
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -13,19 +13,46 @@
   }
 }
 @keyframes size-article-menu {
-  0% {
-    width: calc(100% - 60px);
-  }
-  100% {
-    width: calc(100% - 100px);
+  to {
+    width: 65%;
   }
 }
 @keyframes resize-article-menu {
+  from {
+    width: 65%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes apparition_coeur {
   0% {
-    width: calc(100% - 100px);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
   }
   100% {
-    width: calc(100% - 60px);
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+  50% {
+    color: #FF79DA;
+    text-shadow: 0 0 8px #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+}
+@keyframes fin-animation {
+  to {
+    transform: scale(0);
   }
 }
 h1 {
@@ -83,6 +110,58 @@ footer ul li a i {
   color: black;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  opacity: 0.8;
+  z-index: 1;
+  animation: fin-animation 1s 3s forwards;
+}
+.loader .lettre {
+  color: #9356DC;
+  font-size: 80px;
+  font-family: Shrikhand;
+  letter-spacing: 10px;
+  margin-bottom: 120px;
+}
+.loader .lettre:nth-child(1) {
+  animation: flash 1s linear;
+  animation-delay: 0.2s;
+}
+.loader .lettre:nth-child(2) {
+  animation: flash 1s linear;
+  animation-delay: 0.4s;
+}
+.loader .lettre:nth-child(3) {
+  animation: flash 1s linear;
+  animation-delay: 0.6s;
+}
+.loader .lettre:nth-child(4) {
+  animation: flash 1s linear;
+  animation-delay: 0.8s;
+}
+.loader .lettre:nth-child(5) {
+  animation: flash 1s linear;
+  animation-delay: 1s;
+}
+.loader .lettre:nth-child(6) {
+  animation: flash 1s linear;
+  animation-delay: 1.2s;
+}
+.loader .lettre:nth-child(7) {
+  animation: flash 1s linear;
+  animation-delay: 1.4s;
+}
+.loader .lettre:nth-child(8) {
+  animation: flash 1s linear;
+  animation-delay: 1.6s;
+}
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -121,12 +200,14 @@ footer ul li a i {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 3px 8px;
+  opacity: 1;
 }
 .explore-bar button:hover {
   cursor: pointer;
   opacity: 0.8;
-  box-shadow: rgba(0, 0, 0, 0.24) 2px 5px 7px;
+  box-shadow: rgba(0, 0, 0, 0.45) 2px 5px 8px;
+  transition: all 500ms;
 }
 
 .function-bar {
@@ -177,10 +258,13 @@ footer ul li a i {
   margin-right: 15px;
 }
 .function-bar .menu-bar .menu-item:hover {
+  cursor: pointer;
   background-color: #f5edff;
+  transition: all 500ms;
 }
 .function-bar .menu-bar .menu-item:hover i {
   color: #9356DC;
+  transition: all 500ms;
 }
 
 .restaurant-bar {
@@ -251,11 +335,49 @@ footer ul li a i {
 .restaurant-bar .restaurant-align .restaurant-card a .description .coeur {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 12px;
 }
 .restaurant-bar .restaurant-align .restaurant-card a .description .coeur .fa-solid {
   display: none;
+}
+.restaurant-bar .restaurant-align .restaurant-card a .description .coeur:hover {
+  cursor: pointer;
+}
+.restaurant-bar .restaurant-align .restaurant-card a .description .coeur:hover .fa-regular {
+  display: none;
+}
+.restaurant-bar .restaurant-align .restaurant-card a .description .coeur:hover .fa-solid {
+  display: inline;
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: apparition_coeur 1s;
+  opacity: 1;
+}
+
+@keyframes apparition-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#entree {
+  animation: apparition-menu 600ms ease-in;
+}
+
+#plats {
+  animation: apparition-menu 1.2s ease-in;
+}
+
+#dessert {
+  animation: apparition-menu 1.8s ease-in;
 }
 
 .img-restaurant {
@@ -281,9 +403,30 @@ footer ul li a i {
   font-family: "Shrikhand";
   font-weight: 100;
 }
-.titre-restaurant i {
+.titre-restaurant .coeur {
+  display: flex;
+  align-items: center;
   font-size: 25px;
-  margin-right: 10px;
+  margin-right: 12px;
+}
+.titre-restaurant .coeur .fa-solid {
+  display: none;
+}
+.titre-restaurant .coeur:hover {
+  cursor: pointer;
+}
+.titre-restaurant .coeur:hover .fa-regular {
+  display: none;
+}
+.titre-restaurant .coeur:hover .fa-solid {
+  display: inline;
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: apparition_coeur 1s;
+  opacity: 1;
 }
 
 .menu {
@@ -293,8 +436,7 @@ footer ul li a i {
   padding: 0px 10px;
   gap: 20px;
   background-color: #F7F7F7;
-  position: relative;
-  top: -70px;
+  margin-top: -70px;
 }
 .menu .sous-menu {
   display: flex;
@@ -328,7 +470,7 @@ footer ul li a i {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(100% - 60px);
+  width: 80%;
   padding: 10px 10px 5px 10px;
 }
 .menu .sous-menu .list-menu .article-menu .description h4, .menu .sous-menu .list-menu .article-menu .description p {
@@ -340,10 +482,11 @@ footer ul li a i {
 }
 .menu .sous-menu .list-menu .article-menu .prix {
   font-size: 14px;
-  margin: 31px 10px 1px 5px;
+  display: flex;
+  align-content: flex-end;
   font-weight: bold;
-  position: absolute;
-  right: 10px;
+  flex-wrap: wrap;
+  margin: 0px 11px 11px 0px;
 }
 .menu .sous-menu .list-menu .article-menu .select-menu {
   display: flex;
@@ -360,14 +503,18 @@ footer ul li a i {
 .menu .sous-menu .list-menu .article-menu:hover {
   cursor: pointer;
 }
-.menu .sous-menu .list-menu .article-menu:hover .prix, .menu .sous-menu .list-menu .article-menu:hover .select-menu {
+.menu .sous-menu .list-menu .article-menu:hover .prix {
+  transform: translateX(-30px);
+  transform-origin: right;
+  transition: transform 1000ms ease;
+}
+.menu .sous-menu .list-menu .article-menu:hover .select-menu {
   transform: translateX(-50px);
   transform-origin: right;
   transition: transform 1000ms ease;
 }
 .menu .sous-menu .list-menu .article-menu:hover .description {
-  animation: size-article-menu 1s;
-  animation-fill-mode: forwards;
+  animation: size-article-menu 1s forwards;
 }
 .menu .sous-menu .list-menu .article-menu:hover .select-menu i {
   animation: tourner 1s;
@@ -378,8 +525,7 @@ footer ul li a i {
   transition: transform 1000ms ease;
 }
 .menu .sous-menu .list-menu .article-menu:not(:hover) .description {
-  animation: resize-article-menu 1s;
-  animation-fill-mode: forwards;
+  animation: resize-article-menu 1s forwards;
 }
 
 button {
@@ -391,10 +537,12 @@ button {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 3px 8px;
+  opacity: 1;
 }
 button:hover {
   cursor: pointer;
   opacity: 0.8;
-  box-shadow: rgba(0, 0, 0, 0.24) 2px 5px 7px;
+  box-shadow: rgba(0, 0, 0, 0.45) 2px 5px 8px;
+  transition: all 500ms;
 }/*# sourceMappingURL=main.css.map */

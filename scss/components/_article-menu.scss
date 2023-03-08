@@ -3,12 +3,17 @@
     100% { transform: rotate(360deg); }
 }
 @keyframes size-article-menu {
-    0%{ width: calc(100% - 60px);}
-    100%{width: calc(100% - 100px);}
+    to{
+        width: 65%;
+    }
 }
 @keyframes resize-article-menu {
-    0%{ width: calc(100% - 100px);}
-    100%{width: calc(100% - 60px);}
+    from{ 
+        width: 65%;
+    }
+    to{
+        width: 80%;
+    }
 }
 
 @mixin article-menu{
@@ -25,7 +30,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: calc(100% - 60px);
+        width: 80%;
         padding: 10px 10px 5px 10px;
         h4,p
         {
@@ -38,10 +43,11 @@
     }
     .prix{
         font-size: 14px;
-        margin : 31px 10px 1px 5px;
+        display: flex;
+        align-content: flex-end;
         font-weight: bold;
-        position: absolute;
-        right: 10px;   
+        flex-wrap: wrap;
+        margin : 0px 11px 11px 0px;  
     }
     .select-menu{ 
         display: flex;
@@ -58,15 +64,19 @@
 
     &:hover{
         cursor: pointer;
-        .prix,.select-menu
+        .prix
         { 
+            transform: translateX(-30px);
+            transform-origin: right;
+            transition: transform 1000ms ease;  
+        }
+        .select-menu{
             transform: translateX(-50px);
             transform-origin: right;
             transition: transform 1000ms ease;  
         }
         .description{
-            animation: size-article-menu 1s;
-            animation-fill-mode: forwards;
+            animation: size-article-menu 1s forwards;
         }
     }
 
@@ -82,8 +92,7 @@
             transition: transform 1000ms ease;
         }
         .description{
-            animation: resize-article-menu 1s;
-            animation-fill-mode: forwards;
+            animation: resize-article-menu 1s forwards;
         }
     }
 }

@@ -1,4 +1,6 @@
-
+.loader{
+    @include loader;
+}
 .search-bar{
     display: flex;
     justify-content: center;
@@ -62,10 +64,13 @@
                 }
             }
             &:hover{
+                cursor: pointer;
                 background-color: #f5edff;
+                transition: all 500ms;
                 i{
                     color: $primaire;
-                }
+                    transition: all 500ms;
+                }  
             }
         }
     }
@@ -125,13 +130,7 @@
                             }
                     }
                     .coeur{
-                            display: flex;
-                            align-items: center;
-                            font-size: 20px;
-                            margin-right: 12px;
-                            .fa-solid{
-                                display: none;
-                            }
+                            @include anim_coeur;
                     }
                 }
 

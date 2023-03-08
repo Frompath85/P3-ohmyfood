@@ -1,3 +1,23 @@
+@keyframes apparition-menu{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#entree{
+    animation: apparition-menu  600ms ease-in; 
+}
+#plats{
+    animation: apparition-menu  1.2s ease-in; 
+}
+#dessert{
+    animation: apparition-menu 1.8s ease-in; 
+}
 
 .img-restaurant{
     height: 260px;
@@ -16,17 +36,15 @@
         font-family: 'Shrikhand';
         font-weight: 100;
     }
-    i{
-        font-size: 25px;
-        margin-right: 10px;
+    .coeur{
+       @include anim_coeur;
     }
 }
 .menu{
     @include display-flex(column, stretch, 0px 10px);
     gap : 20px; 
     background-color:$gris-menu;
-    position: relative;
-    top: -70px;
+    margin-top: -70px;
 
     .sous-menu{
         display: flex;
@@ -55,8 +73,3 @@
 button{
    @include purple-button(180px, 20px 20% 30px 20%);
 }
-
-// footer{ une fonction avec condition
-//     position: relative;
-//     top: -70px;
-// }
