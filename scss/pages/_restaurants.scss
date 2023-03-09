@@ -41,7 +41,7 @@
     }
 }
 .menu{
-    @include display-flex(column, stretch, 0px 10px);
+    @include display-flex(column, stretch, 0px 10px 20px 10px);
     gap : 20px; 
     background-color:$gris-menu;
     margin-top: -70px;
@@ -69,7 +69,55 @@
         }
     }
 }
+.btn-commander{
+    background-color: #F7F7F7;
 
-button{
-   @include purple-button(180px, 20px 20% 30px 20%);
+    button{
+        @include purple-button(180px, 20px 20% 30px 20%);
+    }  
+}
+
+
+@media screen and (min-width: 992px){//desktop
+    .header-restaurant{
+        gap: 40%;
+        img{
+            width :20%;
+        }
+   }
+   .img-restaurant{
+        height: 360px;
+   }
+   .menu{
+        flex-direction: row;
+        justify-content: space-around;
+        .sous-menu{
+            width: 29%;
+        }
+   }
+   .btn-commander{
+        display: flex;
+        justify-content: center;
+   }
+
+}
+
+@media screen and (min-width: 768px)and (max-width:992px){ // tablette
+    .header-restaurant{
+        gap: 40%;
+        img{
+            width :20%;
+        }
+   }
+    .sous-menu{    
+        width: 90%; 
+        justify-content: center;  
+        .list-menu{
+            padding-left: 30px;
+        }
+     }
+     .btn-commander{
+        display: flex;
+        justify-content: center;
+   }
 }

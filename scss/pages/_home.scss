@@ -14,13 +14,14 @@
         border: none;
         font-size: 14px;
         font-weight: bold;
+        padding: 5px;
     }
 }
 .explore-bar{
     @include display-flex(column, center, 20px);
     background-color: $gris-menu; 
     p{ 
-       @include pseudo-text(16px, 5px, 0px, center, #605e5e);
+       @include pseudo-text(16px, 5px 0px, center, #605e5e);
     }
     button{
         @include purple-button(200px, 20px 0px 25px 0px);
@@ -31,7 +32,7 @@
 {
     @include display-flex(column, stretch, 10px);
     h2{
-        @include pseudo-text(18px, 10px, 0px, left, black);
+        @include pseudo-text(18px, 10px 0px, left, black);
     }
     .menu-bar{
         @include display-flex(column, end, 0px);
@@ -81,11 +82,12 @@
     padding: 25px 10px 50px 10px;
     background-color: $gris-menu;
     h2{
-        @include pseudo-text(18px, 10px, 0px, left, black);
+        @include pseudo-text(18px, 0px 0px 20px 0px, left, black);
      }
     .restaurant-align{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 20px;
         .restaurant-card{ 
             font-size: 14px;
@@ -107,11 +109,12 @@
                     font-weight: bold;
                     position: absolute ;
                     top: 15px;
-                    left: 195px;
+                    right: 15px;
                 }
                 img{
                     object-fit: cover;
                     width: 100%;
+                    height: 200px;
                     max-height: 180px;
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
@@ -139,3 +142,60 @@
     }
 }
 
+@media screen and (min-width: 992px){ // desktop
+    
+   .header-accueil{
+        img{
+            width :20%;
+        }
+   }
+   .function-bar{
+        .menu-bar{
+            flex-direction: row;
+            gap: 50px;
+            padding: 0px 25px;
+        }
+   }
+   .restaurant-bar{
+        .restaurant-align{
+            flex-direction: row;
+        }
+        .restaurant-card{
+            width: 23%;
+        }
+   }
+   footer{
+    ul{
+        display: flex;
+        gap: 35px;
+    }
+   }
+     
+}
+@media screen and (min-width: 768px)and (max-width:992px){ // tablette
+    
+    .header-accueil{
+        img{
+            width :20%;
+        }
+   }
+   .restaurant-bar {
+        .restaurant-align {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-direction: unset;
+        }
+        .restaurant-card{
+            width: 48%;
+        }
+   }
+   .function-bar{
+    .menu-bar{
+        align-items: center;
+        .menu-item{
+            width: 60%;
+        }
+    }
+   }
+ }
+ 
