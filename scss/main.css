@@ -56,8 +56,6 @@
   }
 }
 h1 {
-  font-family: "Shrikhand";
-  font-weight: 100;
   font-size: 20px;
   margin: 5px 0px;
   text-align: center;
@@ -451,6 +449,10 @@ footer ul li a i {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+.titre-restaurant h1 {
+  font-family: "Shrikhand";
+  font-weight: 100;
+}
 .titre-restaurant .coeur {
   display: flex;
   align-items: center;
@@ -612,6 +614,9 @@ footer ul li a i {
   }
   .img-restaurant {
     height: 360px;
+  }
+  .titre-restaurant h1 {
+    font-size: 28px;
   }
   .menu {
     flex-direction: row;

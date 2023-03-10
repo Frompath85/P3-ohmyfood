@@ -32,6 +32,10 @@
     background-color: $gris-menu;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    h1{
+        font-family: 'Shrikhand';
+        font-weight: 100;
+    }
     .coeur{
        @include anim_coeur;
     }
@@ -88,6 +92,11 @@
    }
    .img-restaurant{
         height: 360px;
+   }
+   .titre-restaurant{
+        h1{
+            font-size: 28px;
+        }
    }
    .menu{
         flex-direction: row;
