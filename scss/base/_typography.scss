@@ -1,3 +1,5 @@
 h1{
-    @include pseudo-text(18px, 5px 0px, center, black);
+    font-family: 'Shrikhand';
+    font-weight: 100;
+    @include pseudo-text(20px, 5px 0px, center, black);
    }

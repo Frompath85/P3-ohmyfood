@@ -56,7 +56,9 @@
   }
 }
 h1 {
-  font-size: 18px;
+  font-family: "Shrikhand";
+  font-weight: 100;
+  font-size: 20px;
   margin: 5px 0px;
   text-align: center;
   color: black;
@@ -126,9 +128,9 @@ footer ul li a i {
 }
 .loader .lettre {
   color: #9356DC;
-  font-size: 80px;
+  font-size: 30px;
   font-family: Shrikhand;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   margin-bottom: 120px;
 }
 .loader .lettre:nth-child(1) {
@@ -364,6 +366,9 @@ footer ul li a i {
 }
 
 @media screen and (min-width: 992px) {
+  .loader .lettre {
+    font-size: 80px;
+  }
   .header-accueil img {
     width: 20%;
   }
@@ -384,6 +389,9 @@ footer ul li a i {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .loader .lettre {
+    font-size: 60px;
+  }
   .header-accueil img {
     width: 20%;
   }
@@ -435,17 +443,13 @@ footer ul li a i {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px 20px;
+  padding: 20px;
   justify-content: space-between;
   position: relative;
   top: -70px;
   background-color: #F7F7F7;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-}
-.titre-restaurant h2 {
-  font-family: "Shrikhand";
-  font-weight: 100;
 }
 .titre-restaurant .coeur {
   display: flex;
@@ -486,14 +490,16 @@ footer ul li a i {
   display: flex;
   flex-direction: column;
 }
-.menu .sous-menu h3 {
+.menu .sous-menu h2 {
   font-weight: 100;
   font-size: 18px;
   margin: 10px 0px 18px 0px;
 }
-.menu .sous-menu h3 span {
+.menu .sous-menu h2 span {
   padding-bottom: 3px;
   border-bottom: 3px solid #99E2D0;
+  width: 44px;
+  display: block;
 }
 .menu .sous-menu .list-menu {
   display: flex;
@@ -517,7 +523,7 @@ footer ul li a i {
   width: 80%;
   padding: 10px 10px 5px 10px;
 }
-.menu .sous-menu .list-menu .article-menu .description h4, .menu .sous-menu .list-menu .article-menu .description p {
+.menu .sous-menu .list-menu .article-menu .description h3, .menu .sous-menu .list-menu .article-menu .description p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -601,6 +607,9 @@ footer ul li a i {
   .header-restaurant img {
     width: 20%;
   }
+  .header-restaurant i {
+    font-size: 25px;
+  }
   .img-restaurant {
     height: 360px;
   }
@@ -622,6 +631,9 @@ footer ul li a i {
   }
   .header-restaurant img {
     width: 20%;
+  }
+  .header-restaurant i {
+    font-size: 18px;
   }
   .sous-menu {
     width: 90%;

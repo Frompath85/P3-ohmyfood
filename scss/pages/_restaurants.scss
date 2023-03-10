@@ -25,17 +25,13 @@
     width: 100%;
 }
 .titre-restaurant{
-    @include display-flex(row, center, 0px 20px);
+    @include display-flex(row, center, 20px);
     justify-content: space-between;
     position: relative;
     top: -70px;
     background-color: $gris-menu;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    h2{
-        font-family: 'Shrikhand';
-        font-weight: 100;
-    }
     .coeur{
        @include anim_coeur;
     }
@@ -49,13 +45,15 @@
     .sous-menu{
         display: flex;
         flex-direction: column;
-        h3{
+        h2{
             font-weight: 100;
             font-size: 18px;
             margin: 10px 0px 18px 0px;
             span{
                 padding-bottom: 3px;
                 border-bottom: 3px solid $tertiaire;
+                width: 44px;
+                display: block;
             }
         }
         .list-menu{ 
@@ -84,6 +82,9 @@
         img{
             width :20%;
         }
+        i{
+            font-size: 25px;
+        }
    }
    .img-restaurant{
         height: 360px;
@@ -107,6 +108,9 @@
         gap: 40%;
         img{
             width :20%;
+        }
+        i{
+            font-size: 18px;
         }
    }
     .sous-menu{    
